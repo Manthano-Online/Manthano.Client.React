@@ -1,12 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./styles/App.scss";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">Hello</header>
+      <img src={props.greeting} alt="It's working gif" />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    greeting: state.mainReducer.greeting
+  };
+};
+
+export default connect(mapStateToProps)(App);
