@@ -15,6 +15,11 @@
             text-decoration: none;
             color: black;
             align-self: center;
+
+            &:hover{
+                cursor: pointer;
+                text-decoration: underline;
+            }
         }
     }
 }
