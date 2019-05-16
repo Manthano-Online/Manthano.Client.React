@@ -1,9 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import NavBar from '../NavBar/NavBar';
+
 const TestContainer = props => {
   return (
     <div>
+      <NavBar />
       <div className="horse-container">
         <div className="horse">🐴🐎</div>
       </div>
